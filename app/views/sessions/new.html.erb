@@ -1,0 +1,8 @@
+<%= flash[:message] %>
+<%= form_tag signin_path do %>
+<h3>Username:</h3>
+<%= text_field_tag 'user[name]' %>
+<h3>Password:</h3>
+<%= text_field_tag 'user[password]' %>
+<%= submit_tag 'Sign In' %>
+<% end %>

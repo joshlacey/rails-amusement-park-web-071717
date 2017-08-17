@@ -34,7 +34,9 @@ DATA = {
 
 def main
   make_users
+
   make_admin
+
   make_attractions_and_rides
 end
 
@@ -66,6 +68,7 @@ def make_attractions_and_rides
       new_attraction.users << customers[rand(0...customers.length)]
     end
     new_attraction.users.each {|c| c.save}
+    # binding.pry
     new_attraction.save
   end
 end

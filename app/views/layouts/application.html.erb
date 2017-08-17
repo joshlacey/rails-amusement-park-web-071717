@@ -20,6 +20,13 @@
             <span class="icon-bar"></span>
           </button>
         <a class="navbar-brand" href="<%= root_url %>"/>Home</a>
+        <% if !logged_in? %>
+        <a class="navbar-brand" id="Sign In" href="/signin"/>Login</a>
+        <% else%>
+        <!-- <a class="navbar-brand" id="Sign Out" href="<%= logout_path %>" method='delete'>Log Out</a> -->
+        <%= link_to 'Log Out', logout_path, method: 'delete' %>
+        <% end %>
+        <a class="navbar-brand" id="Sign Up" href="<%= new_user_path%>"/>Sign Up</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">

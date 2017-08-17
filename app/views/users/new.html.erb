@@ -1,0 +1,12 @@
+<%= form_for @user do |f| %>
+<%= f.label :name %>
+Name <%= f.text_field :name, id:"user[name]" %><br>
+Password <%= f.text_field :password %><br>
+Happiness <%= f.text_field :happiness %><br>
+Nausea <%= f.text_field :nausea %><br>
+Height <%= f.text_field :height %><br>
+Tickets <%= f.text_field :tickets %><br>
+Admin? <%= f.check_box :admin %><br>
+<%= f.submit %><br>
+
+<% end %>
